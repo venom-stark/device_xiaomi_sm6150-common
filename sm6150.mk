@@ -508,6 +508,9 @@ PRODUCT_PACKAGES += \
     libqdMetaData \
     libwfdaac_vendor
 
+PRODUCT_PACKAGES += \
+    init.logcat.rc
+
 # MISC FROM LOS VENDOR
 MSMNILE := msmnile #SM8150
 QCOM_BOARD_PLATFORMS += $(MSMNILE)
