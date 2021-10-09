@@ -507,3 +507,26 @@ PRODUCT_PACKAGES += \
     libnl \
     libqdMetaData \
     libwfdaac_vendor
+
+# MISC FROM LOS VENDOR
+MSMNILE := msmnile #SM8150
+QCOM_BOARD_PLATFORMS += $(MSMNILE)
+UM_4_14_FAMILY := $(MSMNILE)
+QSSI_SUPPORTED_PLATFORMS := $(UM_4_14_FAMILY)
+TARGET_BOARD_PLATFORM := msmnile
+
+SOONG_CONFIG_qtidisplay_drmpp := true
+TARGET_USES_DRM_PP := true
+
+TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS += | (1 << 27)
+MASTER_SIDE_CP_TARGET_LIST := $(UM_4_14_FAMILY)
+MSM_VIDC_TARGET_LIST := $(UM_4_14_FAMILY)
+QCOM_HARDWARE_VARIANT := sm8150
+
+QCOM_SOONG_NAMESPACE := hardware/qcom-caf/$(QCOM_HARDWARE_VARIANT)
+PRODUCT_SOONG_NAMESPACES += $(QCOM_SOONG_NAMESPACE)
+
+PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/commonsys-intf/display
+PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/data-ipa-cfg-mgr
+PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/dataservices
+PRODUCT_SOONG_NAMESPACES += packages/apps/bluetooth
