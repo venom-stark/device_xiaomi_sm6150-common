@@ -153,6 +153,7 @@ vendor.display.enable_default_color_mode=1
 vendor.display.enable_null_display=0
 vendor.display.enable_optimize_refresh=1
 vendor.gralloc.disable_ubwc=0
+debug.force_no_blanking=true
 
 # Display (phase offsets)
 debug.sf.early_app_phase_offset_ns=500000
